@@ -46,6 +46,10 @@ itertools = "0.11"
 # pin a cargo dependency that sadly broke semver
 strip-ansi-escapes = "=0.1.1"
 
+[patch.crates-io]
+# pin a cargo dependency that breaks openssl vendoring
+libgit2-sys = { git = "https://github.com/amyspark/git2-rs.git", branch = "fix-incomplete-vendored-openssl" }
+
 [features]
 default = []
 vendored-openssl = ["cargo/vendored-openssl"]
